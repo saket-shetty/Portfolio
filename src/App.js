@@ -33,14 +33,13 @@ class App extends React.Component {
               <th>Stars</th>
             </tr>
             {this.state.repos.map(rep => (
-              rep.description != null ?
+              rep.description != null &&
                 <tr key={rep.node_id}>
                   <td> <a href={rep.html_url}> {rep.name}</a></td>
                   <td>{rep.description}</td>
                   <td>{rep.language}</td>
                   <td>{rep.stargazers_count}</td>
                 </tr>
-                : <div></div>
             ))}
           </tbody>
         </table>
