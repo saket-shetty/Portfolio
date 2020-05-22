@@ -31,6 +31,7 @@ class App extends React.Component {
               <th>Description</th>
               <th>Language</th>
               <th>Stars</th>
+              <th>Forks</th>
             </tr>
             {this.state.repos.map(rep => (
               rep.description != null &&
@@ -39,6 +40,7 @@ class App extends React.Component {
                   <td>{rep.description}</td>
                   <td>{rep.language}</td>
                   <td>{rep.stargazers_count}</td>
+                  <td>{rep.forks_count}</td>
                 </tr>
             ))}
           </tbody>
